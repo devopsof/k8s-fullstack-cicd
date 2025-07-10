@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Clone Repo') {
       steps {
-        git url: 'https://github.com/devopsof/k8s-fullstack-cicd.git', branch: 'main'
+        git url: 'git@github.com:devopsof/k8s-fullstack-cicd.git', branch: 'main'
       }
     }
 
