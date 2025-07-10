@@ -29,7 +29,7 @@ pipeline {
     stage('Deploy to Kubernetes') {
       steps {
         sh '''
-          kubectl config use-context your-cluster-context
+          kubectl config use-context kind-first-cluster
           kubectl set image deployment/cicd-deploy cicd=$IMAGE_NAME:$BUILD_NUMBER -n cicd-app
         '''
       }
