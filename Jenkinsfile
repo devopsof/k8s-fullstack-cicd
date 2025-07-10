@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent {label 'First'}
 
   environment {
     DOCKER_HUB_CRED = credentials('dockerhub-cred')
