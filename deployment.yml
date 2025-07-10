@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-deploy
+  namespace: cicd-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cicd-app
+  template:
+    metadata:
+      labels:
+        app: cicd-app
+    spec:
+      containers:
+        - name: cicd
+          image: parthdevops/fullstack-app:latest
+          ports:
+            - containerPort: 3000
