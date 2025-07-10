@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     DOCKER_HUB_CRED = credentials('dockerhub-cred')
-    IMAGE_NAME = 'parthdevops/fullstack-app'
+    IMAGE_NAME = 'irady/fullstack-app'
   }
 
   stages {
